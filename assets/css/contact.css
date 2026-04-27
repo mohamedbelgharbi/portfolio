@@ -1,0 +1,130 @@
+/* Base styles */
+.styled-input {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 768px){
+    .styled-input {
+        width: 100%;
+        margin: 0.7rem 0;
+    }
+}
+
+.styled-input label {
+    color: #999;
+    padding-left: 1.3rem;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) { /* Pour les téléphones */
+    .styled-input.wide {
+        width: 100%; /* Prendre toute la largeur sur les petits écrans */
+    }
+}
+
+input,
+textarea {
+    padding: 30px 30px; /* Ajuster le padding pour plus de confort */
+    border: 0;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    background-color: #252533;
+    color: white;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important pour ne pas dépasser les limites */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+input:focus,
+textarea:focus { 
+    outline: 0; 
+}
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Responsive Submit Button */
+.submit-btn {
+    border: none;
+    outline: none;
+    background-color: #c084fc;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    width: 100%; /* Prendre toute la largeur sur petits écrans */
+    max-width: 400px; /* Limiter la largeur maximale */
+    margin: 10px auto; /* Centrer le bouton */
+    border: 1px solid transparent;
+}
+
+.submit-btn:hover {
+    color: #fff;
+    border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 20px; /* Ajuster la taille du texte */
+    }
+
+    .input-container {
+        padding: 0 10px; /* Ajouter du padding pour un meilleur espacement */
+    }
+}
+
+/* Checkbox styles */
+input[type=checkbox] + label {
+    color: #ccc;
+    font-style: italic;
+}
+
+input[type=checkbox]:checked + label {
+    color: #f00;
+    font-style: normal;
+}
